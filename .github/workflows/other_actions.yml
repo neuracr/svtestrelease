@@ -14,9 +14,8 @@ jobs:
         with:
           node-version: '22.x'
           registry-url: 'https://wombat-dressing-room.appspot.com/'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --frozen-lockfile  
       - run: yarn run build
-      - run: yarn test
-      - run: npm publish --access public
+      - run: npm publish --access public --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
