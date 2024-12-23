@@ -16,6 +16,6 @@ jobs:
           registry-url: 'https://wombat-dressing-room.appspot.com/'
       - run: yarn install --frozen-lockfile  
       - run: yarn run build
-      - run: npm publish --access public --verbose
+      - run: npm publish --provenance --access public --verbose
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.WOMBAT_TOKEN }}
