@@ -1,8 +1,8 @@
 {
-  "name": "safevalues",
-  "version": "1.0.0",
+  "name": "svtestrelease",
+  "version": "1.0.0-rc.3",
   "description": "Safe builders for Trusted Types values",
-  "repository": "https://github.com/google/safevalues",
+  "repository": "https://github.com/neuracr/svtestrelease",
   "author": "ISE Web Hardening Team",
   "license": "Apache-2.0",
   "publishConfig":{
