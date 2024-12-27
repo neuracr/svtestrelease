@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: redact secret token
         id: redact-secret-token
-        run: echo "::add-mask::$inputs.wombat_token"
+        run: echo "::add-mask::${{ inputs.wombat_token }}"
       - name: test redaction
         id: test-redaction
         run: echo "secret ${{ inputs.wombat_token }} "
