@@ -2,21 +2,8 @@ name: Publish Package to npmjs
 on:
   workflow_dispatch:
     inputs:
-      name:
-        type: choice
-        description: Who to greet
-        options: 
-        - monalisa
-        - cschleiden
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include 🎉🤣 emojis
-      environment:
-        type: environment
-      tags:
-        description: 'Test scenario tags'
+      wombat_token:
+        description: 'Wombat token for releasing on NPM'
         required: true
         type: string
         
@@ -27,6 +14,12 @@ jobs:
       contents: read
       id-token: write
     steps:
+      - name: redact secret token
+        id: redact-secret-token
+        run: echo "::add-mask::$inputs.wombat_token"
+      - name: test redaction
+        id: test-redaction
+        run: echo "secret ${{ inputs.wombat_token }} " >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
