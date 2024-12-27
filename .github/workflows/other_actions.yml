@@ -30,4 +30,4 @@ jobs:
       - run: yarn run build
       - run: npm publish --provenance --access public --verbose
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.WOMBAT_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ inputs.wombat_token }}
