@@ -19,7 +19,7 @@ jobs:
         run: echo "::add-mask::$inputs.wombat_token"
       - name: test redaction
         id: test-redaction
-        run: echo "secret ${{ inputs.wombat_token }} " >> "$GITHUB_OUTPUT"
+        run: echo "secret ${{ inputs.wombat_token }} "
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
