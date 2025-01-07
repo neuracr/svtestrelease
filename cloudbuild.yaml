@@ -1,0 +1,11 @@
+steps:
+- name: 'node'
+  entrypoint: 'yarn'
+  args: ['install', '--frozen-lockfile']
+- name: 'node'
+  entrypoint: 'yarn'
+  args: ['test']
+artifacts:
+  npmPackages:
+  - repository: 'https://svtestrelease-npm.pkg.dev/safevalues-cicd/svtestrelease'
+    packagePath: '.'
