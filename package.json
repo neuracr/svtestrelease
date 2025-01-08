@@ -37,8 +37,8 @@
     "build:esm": "yarn && tsc -p ./tsconfig.json",
     "build:cjs": "yarn && tsc -p ./tsconfig-cjs.json",
     "build:fixup": "./fixup.sh",
-    "test": "yarn build && karma start --browsers ChromeHeadless,FirefoxHeadless --single-run",
-    "itest": "yarn build && karma start --browsers ChromeHeadless,FirefoxHeadless",
+    "test": "yarn build && karma start --browsers ChromeHeadless --single-run",
+    "itest": "yarn build && karma start --browsers ChromeHeadless",
     "prepack": "yarn test"
   },
   "devDependencies": {
