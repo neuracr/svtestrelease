@@ -5,6 +5,8 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['test']
+options:
+  logging: CLOUD_LOGGING_ONLY
 artifacts:
   npmPackages:
   - repository: 'https://svtestrelease-npm.pkg.dev/safevalues-cicd/svtestrelease'
