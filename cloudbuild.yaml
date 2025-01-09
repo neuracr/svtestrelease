@@ -5,6 +5,9 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
+- name: 'ubuntu' 
+  entrypoint: 'yarn'
+  args: ['test']
 options:
   logging: CLOUD_LOGGING_ONLY
 artifacts:
