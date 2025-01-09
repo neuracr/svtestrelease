@@ -5,7 +5,7 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
-- name: 'node' 
+- name: 'node:current-alpine' 
   entrypoint: 'yarn'
   args: ['test']
 options:
