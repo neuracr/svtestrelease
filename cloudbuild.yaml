@@ -1,11 +1,11 @@
 steps:
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['install', '--frozen-lockfile']
+  args: ['install', '--frozen-lockfile', '--production=false']
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
-- name: 'ubuntu' 
+- name: 'node' 
   entrypoint: 'yarn'
   args: ['test']
 options:
