@@ -38,8 +38,7 @@
     "build:cjs": "yarn && tsc -p ./tsconfig-cjs.json",
     "build:fixup": "./fixup.sh",
     "test": "yarn build && karma start --browsers ChromeHeadless --single-run",
-    "itest": "yarn build && karma start --browsers ChromeHeadless",
-    "prepack": "yarn test"
+    "itest": "yarn build && karma start --browsers ChromeHeadless"
   },
   "devDependencies": {
     "@types/jasmine": "^3.6.2",

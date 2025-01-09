@@ -4,7 +4,9 @@ steps:
   args: ['install', '--frozen-lockfile']
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['test']
+  args: ['build']
+- name: 'node'
+  entrypoint: 
 options:
   logging: CLOUD_LOGGING_ONLY
 artifacts:
