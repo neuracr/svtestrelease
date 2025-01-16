@@ -5,7 +5,7 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
-- name: 'selenium/standalone-chrome' 
+- name: 'zenika/alpine-chrome:with-node' 
   entrypoint: 'yarn'
   args: ['test']
 options:
