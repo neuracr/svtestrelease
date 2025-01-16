@@ -5,7 +5,7 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
-- name: 'node:current-alpine' 
+- name: 'selenium/standalone-chrome' 
   entrypoint: 'yarn'
   args: ['test']
 options:
