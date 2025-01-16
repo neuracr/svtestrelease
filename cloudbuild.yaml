@@ -10,6 +10,7 @@ steps:
   args: ['test']
 options:
   logging: CLOUD_LOGGING_ONLY
+  requestedVerifyOption: VERIFIED
 artifacts:
   npmPackages:
   - repository: 'https://us-central1-npm.pkg.dev/safevalues-cicd/svtestrelease'
