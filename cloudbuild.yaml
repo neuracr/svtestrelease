@@ -12,5 +12,5 @@ options:
   logging: CLOUD_LOGGING_ONLY
 artifacts:
   npmPackages:
-  - repository: 'https://svtestrelease-npm.pkg.dev/safevalues-cicd/svtestrelease'
+  - repository: 'https://us-central1-npm.pkg.dev/safevalues-cicd/svtestrelease'
     packagePath: '.'
