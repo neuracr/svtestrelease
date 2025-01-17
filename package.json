@@ -1,6 +1,6 @@
 {
   "name": "svtestrelease",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0",
   "description": "Safe builders for Trusted Types values",
   "repository": "https://github.com/neuracr/svtestrelease",
   "author": "ISE Web Hardening Team",
