@@ -1,8 +1,11 @@
 {
   "name": "svtestrelease",
-  "version": "1.0.0-rc.7",
+  "version": "1.0.0-rc.8",
   "description": "Safe builders for Trusted Types values",
-  "repository": "https://github.com/neuracr/svtestrelease",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuracr/svtestrelease.git"
+  },
   "author": "ISE Web Hardening Team",
   "license": "Apache-2.0",
   "main": "dist/cjs/index.js",

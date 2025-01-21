@@ -6,9 +6,12 @@ steps:
   entrypoint: 'yarn'
   args: ['build']
 - name: 'node'
+  entrypoint: 'bash'
+  args: ['-c', 'echo "//registry.npmjs.org/:_authToken=$$NODE_AUTH_TOKEN" > ~/.npmrc']
+  secretEnv: ['NODE_AUTH_TOKEN']
+- name: 'node'
   entrypoint: 'npm'
   args: ['publish', '--provenance']
-  secretEnv: ['NODE_AUTH_TOKEN']
 availableSecrets:
   secretManager:
   - versionName: projects/457115741181/secrets/NPM_AUTH_TOKEN/versions/1
