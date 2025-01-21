@@ -5,6 +5,14 @@ steps:
 - name: 'node'
   entrypoint: 'yarn'
   args: ['build']
+- name: 'node'
+  entrypoint: 'npm'
+  args: ['publish', '--provenance']
+  secretEnv: ['NODE_AUTH_TOKEN']
+availableSecrets:
+  secretManager:
+  - versionName: projects/457115741181/secrets/NPM_AUTH_TOKEN
+    env: 'NODE_AUTH_TOKEN'
 options:
   logging: CLOUD_LOGGING_ONLY
   requestedVerifyOption: VERIFIED
